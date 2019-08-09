@@ -4,36 +4,39 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
 
-    <title>xgd-table-of-contents test</title>
+    <title>cpss-table-of-contents test</title>
 
-    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
-    <script src="../../web-component-tester/browser.js"></script>
+    <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="../node_modules/@polymer/test-fixture/test-fixture.js"></script>
+    <script src="../node_modules/mocha/mocha.js"></script>
+    <script src="../node_modules/chai/chai.js"></script>
+    <script src="../node_modules/wct-mocha/wct-mocha.js"></script>
 
-    <link rel="import" href="../xgd-table-of-contents.html">
+    <script type="module" src="../cpss-table-of-contents.js"></script>
   </head>
   <body>
 
     <test-fixture id="BasicTestFixture">
       <template>
-        <xgd-table-of-contents></xgd-table-of-contents>
+        <cpss-table-of-contents></cpss-table-of-contents>
       </template>
     </test-fixture>
 
     <test-fixture id="ChangedPropertyTestFixture">
       <template>
-        <xgd-table-of-contents prop1="new-prop1"></xgd-table-of-contents>
+        <cpss-table-of-contents prop1="new-prop1"></cpss-table-of-contents>
       </template>
     </test-fixture>
 
-    <script>
-      suite('xgd-table-of-contents', () => {
+    <script type="module">
+      suite('cpss-table-of-contents', () => {
 
         test('instantiating the element with default properties works', () => {
           const element = fixture('BasicTestFixture');
-          assert.equal(element.prop1, 'xgd-table-of-contents');
+          assert.equal(element.prop1, 'cpss-table-of-contents');
           const elementShadowRoot = element.shadowRoot;
           const elementHeader = elementShadowRoot.querySelector('h2');
-          assert.equal(elementHeader.innerHTML, 'Hello xgd-table-of-contents!');
+          assert.equal(elementHeader.innerHTML, 'Hello cpss-table-of-contents!');
         });
 
         test('setting a property on the element works', () => {

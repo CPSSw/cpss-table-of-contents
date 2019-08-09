@@ -1,8 +1,6 @@
-[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/XGDElements/xgd-table-of-contents)
+# \<cpss-table-of-contents\>
 
-# \<xgd-table-of-contents\>
-
-Provides a Polymer 2 table of contents for use in a document library or other such use.
+Provides a LitElement table of contents for use in a document library or other such use.
 
 ### Styling
 
@@ -18,11 +16,11 @@ The following custom properties and mixins are available for styling.
 
 Example:
 ```html
-<xgd-table-of-contents id="toc"
+<cpss-table-of-contents id="toc"
     linkicon="icons:chevron-right" 
     opened="icons:expand-more" 
     closed="icons:expand-less">
-</xgd-table-of-contents>
+</cpss-table-of-contents>
 
 <script>
     var data = {
